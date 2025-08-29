@@ -1,0 +1,65 @@
+<html lang="en">
+<aside>
+<div class="card">
+<h3>Process</h3>
+<p style="margin-bottom:8px">I work through clear stages: design &amp; patterning → cutting → edge finishing &amp; dyeing → stitching → final finish &amp; quality check.</p>
+<h4 style="margin:8px 0">Availability</h4>
+<p class="sub">Available from November. Eligible for IEC YP — I can provide a signed contract to complete the process.</p>
+<h4 style="margin:8px 0">Contact</h4>
+<p style="margin:0 0 8px">Email: <a href="mailto:magdalena@example.com">magdalena@example.com</a></p>
+<p style="margin:0 0 8px"><a href="#" class="cta">Download CV (PDF)</a></p>
+</div>
+
+
+<div class="card" style="margin-top:14px">
+<h3>Short CV</h3>
+<p style="margin:0">Crafted equestrian gear (bridles, reins, breastplates) and leather giftware (wallets, belts, holsters). Managed full production process and maintained efficient workshop.</p>
+</div>
+</aside>
+</section>
+
+
+<section style="margin-top:28px">
+<h3>Gallery — click to enlarge</h3>
+<p class="sub">High‑resolution photos help employers see the quality of your stitchwork, edges and finish.</p>
+<div class="grid">
+<!-- repeat a few cards to show more -->
+<div class="card"><img src="https://via.placeholder.com/800x600?text=Stitching+detail" alt="Stitching detail" data-full="https://via.placeholder.com/1600x1200?text=Stitching+detail"></div>
+<div class="card"><img src="https://via.placeholder.com/800x600?text=Edge+finish" alt="Edge finish" data-full="https://via.placeholder.com/1600x1200?text=Edge+finish"></div>
+<div class="card"><img src="https://via.placeholder.com/800x600?text=Dye+work" alt="Dye work" data-full="https://via.placeholder.com/1600x1200?text=Dye+work"></div>
+</div>
+</section>
+
+
+<section id="contact" style="margin-top:28px">
+<h3>Contact & Hire</h3>
+<p class="sub">Prefer email. If you are interested in hiring me, please contact me at <a href="mailto:magdalena@example.com">magdalena@example.com</a> or attach a contract and I will guide you through the IEC process.</p>
+</section>
+</main>
+
+
+<div class="modal" id="modal"><div class="modal-inner"><button id="close" style="float:right">Close</button><img id="modal-img" src="" alt=""></div></div>
+
+
+<footer>
+<div class="container">
+<p>© Magdalena Šikulová — Handmade leatherwork. Images &amp; content © Magdalena.</p>
+</div>
+</footer>
+
+
+<script>
+// simple gallery modal
+document.querySelectorAll('#gallery img, .grid img').forEach(img=>{
+img.style.cursor='pointer'
+img.addEventListener('click',e=>{
+const src = e.target.dataset.full || e.target.src;
+document.getElementById('modal-img').src = src;
+document.getElementById('modal').classList.add('open');
+})
+})
+document.getElementById('close').addEventListener('click',()=>document.getElementById('modal').classList.remove('open'))
+document.getElementById('modal').addEventListener('click',e=>{if(e.target.id==='modal')document.getElementById('modal').classList.remove('open')})
+</script>
+</body>
+</html>
